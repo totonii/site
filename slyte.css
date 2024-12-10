@@ -1,0 +1,235 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Cor de fundo clara padrão */
+    color: #000; /* Cor do texto escura padrão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para o modo escuro */
+}
+
+body.dark-mode {
+    background-color: #121212; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto clara */
+}
+
+/* Aplica o modo escuro aos elementos do cabeçalho, barra de navegação e rodapé */
+body.dark-mode .header,
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #222; 
+}
+
+/* Estilos do Cabeçalho */
+.header {
+    background-color: #4a69bd; 
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+.header h1 {
+    margin: 0;
+    cursor: pointer; 
+}
+
+.header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-container {
+    position: absolute; 
+    top: 10px; 
+    left: 10px;  
+}
+
+.profile-picture {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#nomeUsuario {
+    z-index: 1;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos da Barra de Navegação */
+.navbar {
+    overflow: hidden; 
+    background-color: #4a69bd;
+    margin-top: 60px; /* Ajuste o espaçamento conforme necessário */
+    transition: background-color 0.3s;
+}
+
+.navbar a {
+    float: right; 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd; 
+    color: black;
+}
+
+body.dark-mode .navbar a:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* Estilos do Container Principal */
+.container {
+    padding: 20px;
+    max-width: 800px; /* Ou ajuste conforme necessário */
+    margin: 100px auto; /* Ou ajuste conforme necessário */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos dos Formulários */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4; 
+    color: #333;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a69bd; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3b5b96; 
+}
+
+/* Estilos do Rodapé */
+.footer {
+    background-color: #4a69bd;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; 
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+    cursor: pointer; 
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos dos Cards */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: width 0.3s, height 0.3s; 
+    overflow: hidden;   
+    cursor: pointer;    
+}
+
+.card:focus { 
+    outline: 2px solid #007bff; 
+}
+
+.card.expanded {
+    width: 90%;
+    height: auto; 
+}
+
+.card img {
+    max-width: 100%;     
+    border-radius: 8px 8px 0 0; 
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+/* Estilos da Calculadora de IMC */
+.bmi-calculator {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.bmi-calculator input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bmi-calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bmi-calculator button:hover {
+    background-color: #3b5b96; 
+}
+
+/* Estilos para os cards no modo escuro */
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Estilos para a calculadora de IMC no modo escuro */
+.dark-mode .bmi-calculator {
+    background-color: #333;
+}
